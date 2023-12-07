@@ -1,12 +1,10 @@
 import { createContext } from 'react';
 
-class RecipesClient {
-  async getRecipes() {
-    return null;
-  }
+export interface RecipesClient {
+  getRecipes(): Promise<null>;
 }
 
-class RecipesClientImpl extends RecipesClient {
+class RecipesClientImpl implements RecipesClient {
   async getRecipes() {
     return null;
   }
