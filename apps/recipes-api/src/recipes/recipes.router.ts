@@ -1,25 +1,20 @@
 import { Router } from 'express';
-import { Recipe } from './recipe'
-
-// import { inject } from '../di';
+import { inject } from '../di';
+import { RECIPES_REPOSITORY_TOKEN } from './recipes.repository'
 
 export const recipesRouter = Router();
 
-recipesRouter.get('/recipes', async (_, res) => {
-  // const repo = inject(GREETINGS_REPOSITORY_TOKEN);
-  //
-  // const body: GreetingsResponseDto = {
-  //   items: await repo.getGreetings(),
-  // };
+recipesRouter.get('/recipes', async (req, res) => {
+  const repo = inject(RECIPES_REPOSITORY_TOKEN);
 
-  const recipe: Recipe = {
-    id: "1",
-    name: 'test',
-    description: 'test',
-    pictureUrl: 'test',
-    steps: [],
-    ingredients: [],
+
+  const keyword = req.query.keyword;
+  if (keyword) {
+    // todo: get recipes by keyword
+    res.send({ message: "not implemented" });
   }
 
-  res.send([recipe]);
+  const body = { items: await repo.getRecipes() };
+
+  res.send(body);
 });
