@@ -32,6 +32,38 @@ describe(recipesRouter.name, () => {
       }),
     ]);
   });
+
+  it.skip('should add existing recipe to favorites', async () => {
+    const { client } = setUp();
+
+    const response = await client
+      .put('/fav')
+      .send({ id: 'rec_3' });
+
+    expect(response.statusCode).toBe(200);
+  });
+
+  it.skip('should get my existing favorites', async () => {
+    const { client } = setUp();
+
+    const response = await client
+      .put('/fav')
+      .send({ id: 'rec_3' });
+
+    expect(response.statusCode).toBe(200);
+
+    const response2 = await client.get('/fav');
+
+    expect(response2.statusCode).toBe(200);
+    expect(response2.body.items).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          id: 'rec_3',
+        }),
+      ])
+    );
+
+  });
 });
 
 function setUp() {
