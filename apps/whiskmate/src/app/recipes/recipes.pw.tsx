@@ -9,5 +9,6 @@ test('Recipes is ok', async ({ page, mount }) => {
     </WithRecipesClientFake>
   );
 
-  await expect(component).toContainText('Yo');
+  await expect(component).toContainText('Creamy Tomato Basil Pasta');
+  await expect(component).toContainText('Chili Cheese Quesadillas test');
 });
