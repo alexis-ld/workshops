@@ -11,6 +11,7 @@ class RecipeRepositoryImpl {
     recipes: [
       {
         "id": "rec_1",
+        "fav": false,
         "name": "Creamy Tomato Basil Pasta",
         "description": "A simple and delicious pasta dish with a creamy tomato basil sauce.",
         "pictureUrl": "https://dishingouthealth.com/wp-content/uploads/2022/09/CreamyTomatoPasta_Square.jpg",
@@ -36,6 +37,7 @@ class RecipeRepositoryImpl {
       },
       {
         "id": "rec_2",
+        "fav": false,
         "name": "Chili Cheese Quesadillas",
         "description": "A classic comfort food that's easy to make and always satisfying.",
         "pictureUrl": "https://mylifecookbook.com/wp-content/uploads/2022/11/chili-quesadilla-closeupSQ.jpg",
@@ -56,6 +58,7 @@ class RecipeRepositoryImpl {
       },
       {
         "id": "rec_3",
+        "fav": false,
         "name": "Chocolate Chip Cookies",
         "description": "A classic recipe that's always a hit.",
         "pictureUrl": "https://handletheheat.com/wp-content/uploads/2020/10/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-637x637-1.jpg",
@@ -81,6 +84,7 @@ class RecipeRepositoryImpl {
       },
       {
         "id": "rec_4",
+        "fav": false,
         "name": "Savory Potato Pancakes",
         "description": "These savory potato pancakes are a delicious and easy-to-make appetizer or side dish. They are made with simple ingredients that you probably already have on hand.",
         "pictureUrl": "https://therecipecritic.com/wp-content/uploads/2021/02/potatopancakeshero.jpg",
@@ -103,6 +107,7 @@ class RecipeRepositoryImpl {
       },
       {
         "id": "rec_5",
+        "fav": false,
         "name": "Classic Margherita Pizza",
         "description": "A classic pizza recipe that's always a crowd-pleaser. Made with a simple dough, homemade tomato sauce, fresh mozzarella cheese, and basil, this pizza is sure to satisfy your cravings.",
         "pictureUrl": "https://ohsweetbasil.com/wp-content/uploads/four-cheese-margherita-pizza-recipe-12-scaled-1400x2100.jpg",
@@ -136,6 +141,7 @@ class RecipeRepositoryImpl {
       },
       {
         "id": "rec_6",
+        "fav": false,
         "name": "Tartiflette",
         "description": "A traditional French dish made with potatoes, Reblochon cheese, and lardons.",
         "pictureUrl": "https://img.taste.com.au/VqLW9HQ7/w720-h480-cfill-q80/taste/2017/06/tartiflette-127553-1.jpg",
