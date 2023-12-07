@@ -10,14 +10,8 @@ export class GreetingsClientFake implements GreetingsClient {
     return {
       items: [
         {
-          id: '1',
-          description: 'Can I get some burger, with some peanut butter',
-          name: 'Burger',
-          ingredients: [
-            'Pain burger',
-          ],
-          pictureUrl: 'https://cdn-www.konbini.com/files/2022/12/jones-burger-feat.jpg',
-          steps: [],
+          id: 'greet_1',
+          label: 'Welcome!',
         },
       ],
     };
