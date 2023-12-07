@@ -1,6 +1,10 @@
 export interface GreetingDto {
   id: string;
-  label: string;
+  name: string;
+  description: string
+  pictureUrl: string
+  steps: string[]
+  ingredients: string[]
 }
 
 export interface GreetingsResponseDto {
