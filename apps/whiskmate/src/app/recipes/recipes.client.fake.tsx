@@ -53,7 +53,7 @@ export class RecipesClientFake implements RecipesClient {
   }
 }
 
-export function WithGreetingsClientFake({ children }: { children: ReactNode }) {
+export function WithRecipesClientFake({ children }: { children: ReactNode }) {
   return (
     <RecipesClientProvider.Provider value={new RecipesClientFake()}>
       {children}
