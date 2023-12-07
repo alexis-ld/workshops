@@ -11,10 +11,12 @@ describe(recipesRouter.name, () => {
     const response = await client.get('/recipes');
 
     expect(response.statusCode).toBe(200);
-    expect(response.body.items).toContainEqual(
-      expect.objectContaining({
-        id: 'rec_1',
-      })
+    expect(response.body.items).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          id: 'rec_1',
+        }),
+      ])
     );
   });
 });
