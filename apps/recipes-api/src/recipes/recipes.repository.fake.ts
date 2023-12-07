@@ -27,6 +27,25 @@ export class RecipesRepositoryFake implements RecipesRepository {
         "1/2 cup heavy cream",
         "Salt and pepper to taste"
       ]
+    }, {
+      "id": "rec_2",
+      "name": "Chili Cheese Quesadillas test",
+      "description": "A classic comfort food that's easy to make and always satisfying.",
+      "pictureUrl": "https://mylifecookbook.com/wp-content/uploads/2022/11/chili-quesadilla-closeupSQ.jpg",
+      "steps": [
+        "Heat a large skillet over medium heat.",
+        "Place a tortilla on the skillet and sprinkle with cheese.",
+        "Top the cheese with your favorite chili toppings, such as shredded beef, beans, and onions.",
+        "Add another tortilla to the top and press down gently.",
+        "Cook for 2-3 minutes per side, or until the tortilla is golden brown and the cheese is melted.",
+        "Cut the quesadilla into wedges and serve immediately."
+      ],
+      "ingredients": [
+        "2 large flour tortillas",
+        "1 cup shredded cheddar cheese",
+        "1/2 cup chili, heated",
+        "Shredded beef, beans, onions, and other toppings of your choice"
+      ]
     }];
   }
 }

@@ -19,6 +19,19 @@ describe(recipesRouter.name, () => {
       ])
     );
   });
+
+  it('should get filtered recipes', async () => {
+    const { client } = setUp();
+
+    const response = await client.get('/recipes?keywords=test');
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.items).toEqual([
+      expect.objectContaining({
+        id: 'rec_2',
+      }),
+    ]);
+  });
 });
 
 function setUp() {
