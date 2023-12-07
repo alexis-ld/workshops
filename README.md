@@ -44,7 +44,7 @@ In this workshop, we will restrict ourselves with some extreme rules _(cf. [Rule
 
 ## App requirements
 
-- [ ] User should be able to list all recipes.
+- [X] User should be able to list all recipes.
 - [ ] User should be able to filter recipes by keywords.
 - [ ] User should be able to add recipes to "my meals".
 - [ ] User should not be able to add the same recipe to "my meals" twice.
