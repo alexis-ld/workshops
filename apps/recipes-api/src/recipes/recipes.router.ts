@@ -43,6 +43,16 @@ recipesRouter.get('/recipes', async (req, res) => {
   res.send(body);
 });
 
+recipesRouter.get('/fav', async (_, res) => {
+  const repo = inject(RECIPES_REPOSITORY_TOKEN);
+
+  const recipes = await repo.getRecipes();
+
+  const body: RecipesResponseDto = { items: recipes.filter((recipe) => recipe.fav) };
+
+  res.send(body);
+});
+
 recipesRouter.put('/fav', async (req, res) => {
   // const repo = inject(RECIPES_REPOSITORY_TOKEN);
 
