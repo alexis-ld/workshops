@@ -5,4 +5,5 @@ export interface Recipe {
   pictureUrl: string
   steps: string[]
   ingredients: string[]
+  fav?: boolean
 }
