@@ -9,8 +9,8 @@ recipesRouter.get('/recipes', async (req, res) => {
   const repo = inject(RECIPES_REPOSITORY_TOKEN);
 
 
-  const keyword = req.query.keyword;
-  if (keyword) {
+  const keywords = req.query.keywords;
+  if (keywords) {
     // todo: get recipes by keyword
     res.send({ message: "not implemented" });
   }
