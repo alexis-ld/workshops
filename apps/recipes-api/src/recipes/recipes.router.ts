@@ -42,3 +42,20 @@ recipesRouter.get('/recipes', async (req, res) => {
 
   res.send(body);
 });
+
+recipesRouter.put('/fav', async (req, res) => {
+  // const repo = inject(RECIPES_REPOSITORY_TOKEN);
+
+  const { recipeId } = req.body.id
+
+  // todo: add to fav
+
+  res.send({ message: `fav ${recipeId} added` });
+  return;
+})
+
+recipesRouter.delete('/fav/:id', async (req, res) => {
+  const id = req.params.id
+
+  res.send({ message: `${id} deleted from fav` });
+})
