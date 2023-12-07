@@ -5,6 +5,7 @@ export interface RecipeDto {
   pictureUrl: string
   steps: string[]
   ingredients: string[]
+  fav?: boolean
 }
 
 export interface RecipesResponseDto {
