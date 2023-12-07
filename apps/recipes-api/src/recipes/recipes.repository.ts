@@ -4,6 +4,7 @@ import {JSONSyncPreset} from 'lowdb/node';
 
 export interface RecipesRepository {
   getRecipes(): Promise<Recipe[]>;
+  toggleFav(id: string): Promise<void>;
 }
 
 class RecipeRepositoryImpl {
@@ -175,6 +176,20 @@ class RecipeRepositoryImpl {
   async getRecipes(): Promise<Recipe[]> {
     this._db.read();
     return this._db.data.recipes;
+  }
+
+  async toggleFav(id: string): Promise<void> {
+    this._db.data.recipes.map((recipe) => {
+      if (recipe.id !== id) {
+        return recipe
+      }
+      return {
+        ...recipe,
+        fav: !recipe.fav
+      };
+    })
+
+    this._db.write();
   }
 }
 

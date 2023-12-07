@@ -54,18 +54,27 @@ recipesRouter.get('/fav', async (_, res) => {
 });
 
 recipesRouter.put('/fav', async (req, res) => {
-  // const repo = inject(RECIPES_REPOSITORY_TOKEN);
+  const repo = inject(RECIPES_REPOSITORY_TOKEN);
 
   const { recipeId } = req.body.id
 
-  // todo: add to fav
-
-  res.send({ message: `fav ${recipeId} added` });
-  return;
+  try {
+    await repo.toggleFav(recipeId);
+    res.send({ message: `fav ${recipeId} added` });
+  } catch (e) {
+    res.status(500).send({ error: 'internal error' })
+  }
 })
 
 recipesRouter.delete('/fav/:id', async (req, res) => {
+  const repo = inject(RECIPES_REPOSITORY_TOKEN);
+
   const id = req.params.id
 
-  res.send({ message: `${id} deleted from fav` });
+  try {
+    await repo.toggleFav(id);
+    res.send({ message: `fav ${id} removed` });
+  } catch (e) {
+    res.status(500).send({ error: 'internal error' })
+  }
 })

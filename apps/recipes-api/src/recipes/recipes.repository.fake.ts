@@ -2,6 +2,10 @@ import { Recipe } from './recipe';
 import { RecipesRepository } from './recipes.repository';
 
 export class RecipesRepositoryFake implements RecipesRepository {
+  toggleFav(): Promise<void> {
+    return Promise.resolve(undefined)
+  }
+
   async getRecipes(): Promise<Recipe[]> {
     return [
       {
