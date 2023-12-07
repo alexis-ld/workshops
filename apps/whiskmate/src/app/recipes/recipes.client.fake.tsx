@@ -9,7 +9,7 @@ export class RecipesClientFake implements RecipesClient {
         "id": "rec_1",
         "name": "Creamy Tomato Basil Pasta",
         "description": "A simple and delicious pasta dish with a creamy tomato basil sauce.",
-        "pictureUrl": "https://dishingouthealth.com/wp-content/uploads/2022/09/CreamyTomatoPasta_Square.jpg",
+        "pictureUrl": "https://cdn-www.konbini.com/files/2022/12/jones-burger-feat.jpg",
         "steps": [
           "Cook the pasta according to package directions.",
           "While the pasta is cooking, heat the olive oil in a large skillet over medium heat.",

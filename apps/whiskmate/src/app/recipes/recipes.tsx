@@ -14,11 +14,20 @@ export function Recipes() {
     }).catch(() => { console.log('cheh') });
   }, [client]);
 
-  return (<p>
-    {recipesLoaded && recipes.map((recipe, idx) => (
-      <p key={idx}>{recipe.name}</p>
+  return (<div>
+    {recipesLoaded && recipes.map(({ id, name, description, pictureUrl, ingredients  }) => (
+      <div key={id}>
+        <span style={{ color: 'red' }}>{name}</span>
+        <img src={pictureUrl} alt="papapapa" />
+        <p>{description}</p>
+        <ul>
+          {ingredients.map((ingredient) => (
+            <li key={ingredient}>{ingredient}</li>
+          ))}
+        </ul>
+      </div>
     ))}
-  </p>);
+  </div>);
 }
 
 export default Recipes;
