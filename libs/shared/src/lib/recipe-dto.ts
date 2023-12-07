@@ -6,3 +6,7 @@ export interface RecipeDto {
   steps: string[]
   ingredients: string[]
 }
+
+export interface RecipesResponseDto {
+  items: RecipeDto[];
+}
